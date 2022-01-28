@@ -16,7 +16,7 @@ Consumir API
 -[x] Usar try/catch
 -[x] mostrar a resposta na tela
 
-##BackEnd
+## BackEnd
 
 Consumir API
 -[x] jsonplaceholder (https://jsonplaceholder.typicode.com/users)
