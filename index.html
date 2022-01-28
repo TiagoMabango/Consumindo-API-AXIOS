@@ -15,23 +15,23 @@
 </html>
 
 <script>
-  async function getcontent() {
+  async function getContent() {
     try {
       const res = await fetch(`http://localhost:4567/`);
       const data = await res.json();
-      show(data);
+      showUsers(data);
     } catch (error) {
       console.log(error);
     }
   }
 
-  getcontent();
+  getContent();
 
-  function show(data) {
+  function showUsers(data) {
     let output = "";
     data.forEach(({ name }) => {
       output += `
-        <li>Nome Completo : ${name}</li>
+        <li>Nome : ${name}</li>
       `;
     });
     document.querySelector("#app").innerHTML = output;

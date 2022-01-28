@@ -23,7 +23,7 @@ header {
 }
 
 main {
-  max-width: 70%;
+  max-width: 30%;
   margin: 0 auto;
   background: #fff;
 
@@ -39,5 +39,5 @@ li {
 
 #app li {
   margin-bottom: 1rem;
-  width: 40%;
+  width: 100%;
 }
