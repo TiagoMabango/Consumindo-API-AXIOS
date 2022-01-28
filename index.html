@@ -2,7 +2,7 @@
   <head>
     <meta charset="utf-8" />
     <title>Consumindo api</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="public/style.css" />
   </head>
   <body>
     <header>
@@ -11,29 +11,6 @@
     <main>
       <div id="app"></div>
     </main>
+    <script src="public/script.js"></script>
   </body>
 </html>
-
-<script>
-  async function getContent() {
-    try {
-      const res = await fetch(`http://localhost:4567/`);
-      const data = await res.json();
-      showUsers(data);
-    } catch (error) {
-      console.log(error);
-    }
-  }
-
-  getContent();
-
-  function showUsers(data) {
-    let output = "";
-    data.forEach(({ name }) => {
-      output += `
-        <li>Nome : ${name}</li>
-      `;
-    });
-    document.querySelector("#app").innerHTML = output;
-  }
-</script>
