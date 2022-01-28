@@ -1,0 +1,43 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  font-family: Poppins;
+  background: #f4f4ff;
+}
+
+header {
+  background: #060f1d;
+  height: 30vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #fff;
+
+  border-top: 2px solid #fff;
+
+  text-transform: uppercase;
+}
+
+main {
+  max-width: 70%;
+  margin: 0 auto;
+  background: #fff;
+
+  margin-top: -2rem;
+
+  padding: 10px;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+#app li {
+  margin-bottom: 1rem;
+  width: 40%;
+}

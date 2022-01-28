@@ -1,27 +1,39 @@
-<body>
-    <main></main>
-</body>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Consumindo api</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Consumindo api</h1>
+    </header>
+    <main>
+      <div id="app"></div>
+    </main>
+  </body>
+</html>
 
-<script>    
-    async function getcontent() { 
-        try {
-            const response = await fetch('http://localhost:4567/')
-            //console.log(response)
-            const data = await response.json()
-            show(data)
-        } catch (error) {
-            console.log("Errrouuuu")
-        }
+<script>
+  async function getcontent() {
+    try {
+      const res = await fetch(`http://localhost:4567/`);
+      const data = await res.json();
+      show(data);
+    } catch (error) {
+      console.log(error);
     }
+  }
 
-    getcontent()
+  getcontent();
 
-    function show(users){
-
-        let output = ''
-        for(let user of users){
-            output += `<li>${user.name}</li>`
-        }
-        document.querySelector('main').innerHTML = output
-    }
+  function show(data) {
+    let output = "";
+    data.forEach(({ name }) => {
+      output += `
+        <li>Nome Completo : ${name}</li>
+      `;
+    });
+    document.querySelector("#app").innerHTML = output;
+  }
 </script>
