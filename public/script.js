@@ -14,7 +14,9 @@ function showUsers(data) {
   let output = "";
   data.forEach(({ name }) => {
     output += `
-      <li>Nome : ${name}</li>
+      <li>
+        Nome : ${name}
+      </li>
     `;
   });
   document.querySelector("#app").innerHTML = output;
